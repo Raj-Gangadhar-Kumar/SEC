@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRCTC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('tr.jpg') no-repeat center center/cover;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #0059b3, #ff6600);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ddd;
+    }
+
+    /* Main Containers */
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      padding: 25px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0059b3;
+    }
+
+    .container input, .container select, .container button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .container button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container button:hover {
+      background: #cc5200;
+    }
+
+    /* Footer */
+    footer {
+      background: gray;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer img {
+      height: 35px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="tr.jpg" alt="IRCTC Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Trains</a>
+      <a href="#">Tourism</a>
+      <a href="#">Services</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <!-- Main Two Containers -->
+  <section class="main">
+
+    <!-- Left Container (Login / User Info) -->
+    <div class="container">
+      <h2>User Login</h2>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button type="submit">Login</button>
+      <p style="text-align:center; font-size:14px; margin-top:10px;">
+        New User? <a href="#">Register Here</a>
+      </p>
+    </div>
+
+    <!-- Right Container (Booking Form) -->
+    <div class="container">
+      <h2>Book Your Ticket</h2>
+      <form>
+        <input type="text" placeholder="From Station">
+        <input type="text" placeholder="To Station">
+        <input type="date">
+        <select>
+          <option>All Classes</option>
+          <option>Sleeper (SL)</option>
+          <option>AC 3 Tier (3A)</option>
+          <option>AC 2 Tier (2A)</option>
+          <option>AC First Class (1A)</option>
+        </select>
+        <button type="submit">Find Trains</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 IRCTC | All Rights Reserved</p>
+    <div>
+      <img src="facebook.png" alt="Facebook">
+      <img src="twitter.png" alt="Twitter">
+      <img src="instagram.png" alt="Instagram">
+    </div>
+  </footer>
+
+</body>
+</html>
