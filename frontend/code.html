@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raj Kumar | Developer</title>
+  <link href="" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --glass: rgba(255, 255, 255, 0.05);
+      --primary: #4cc9f0;
+      --accent: #ffb703;
+      --text: #f1f1f1;
+      --card-radius: 16px;
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #ccc;
+    }
+
+    nav {
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+      margin: auto;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .about-card {
+      background: var(--glass);
+      border-radius: var(--card-radius);
+      padding: 2rem;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .about-card img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid var(--primary);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill {
+      background: var(--glass);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      color: var(--accent);
+      transition: all 0.3s;
+      cursor: default;
+    }
+
+    .skill:hover {
+      transform: translateY(-4px);
+      background-color: var(--accent);
+      color: #000;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project {
+      background: var(--glass);
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+    }
+
+    .project img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .project-desc {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin: 0.5rem 0;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 0.5rem;
+    }
+
+    .project-link:hover {
+      color: var(--primary);
+    }
+
+    form {
+      background: var(--glass);
+      padding: 2rem;
+      border-radius: var(--card-radius);
+      box-shadow: var(--shadow);
+      max-width: 500px;
+      margin: 0 auto;
+      backdrop-filter: blur(10px);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      border: none;
+      padding: 0.8rem 2rem;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Raj Gangadhar Kumar</h1>
+    <p>Full Stack Developer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <div class="about-card">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Raj Kumar" />
+        <h2 class="section-title">About Me</h2>
+        <p>
+          I'm Raj Gangadhar Kumar, a passionate full stack developer who loves building modern, performant, and user-friendly web applications. I specialize in crafting scalable solutions and clean UI/UX design.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Java</div>
+        <div class="skill">DSA</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Portfolio Site">
+          <div class="project-content">
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-desc">A sleek React-based portfolio featuring smooth animations and responsive design.</div>
+            <a class="project-link" href="#">View Project</a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Task App">
+          <div class="project-content">
+            <div class="project-title">Task Manager App</div>
+            <div class="project-desc">MERN stack app for managing daily tasks with login & real-time updates.</div>
+            <a class="project-link" href="#">View Project</a>
+          </div>
+        </div>
+        <div class="project">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Weather Dashboard">
+          <div class="project-content">
+            <div class="project-title">Weather Dashboard</div>
+            <div class="project-desc">A responsive app that fetches weather data
